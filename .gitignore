@@ -1,0 +1,9 @@
+build/*
+package/*
+updates.xml
+config.js
+.DS_Store
+*.log
+*.swp
+node_modules
+.idea/*

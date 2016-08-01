@@ -1,0 +1,32 @@
+{
+  "name": "杭州驾校模拟科目预约监控",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "杭州驾校模拟科目预约监控",
+  "browser_action": {
+    "default_icon": "",
+    "default_popup": "src/popup.html"
+  },
+
+  "content_scripts": [{
+    "js": ["src/jQuery.js", "config.js"],
+    "matches": [ "http://*/*", "https://*/*" ],
+    "run_at": "document_start"
+  }, {
+    "exclude_globs": [  ],
+    "include_globs": [ "*" ],
+    "css": ["src/style.css"],
+    "js": ["src/script.js"],
+    "matches": [ "http://*/*", "https://*/*" ],
+    "run_at": "document_end"
+  }],
+
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "activeTab",
+    "<all_urls>"
+  ]
+}
