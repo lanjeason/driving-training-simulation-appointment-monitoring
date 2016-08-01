@@ -4,12 +4,12 @@
   "manifest_version": 2,
   "description": "杭州驾校模拟科目预约监控",
   "browser_action": {
-    "default_icon": "",
+    "default_icon": "logo.png",
     "default_popup": "src/popup.html"
   },
 
   "content_scripts": [{
-    "js": ["src/jQuery.js", "config.js"],
+    "js": ["src/jQuery.mini.js", "config.js"],
     "matches": [ "http://*/*", "https://*/*" ],
     "run_at": "document_start"
   }, {
